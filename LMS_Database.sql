@@ -19,6 +19,11 @@
 -- VALUES (NULL,'UTA Branch','123 Cooper St, Arlington TX 76101');
 
 -- SELECT b.title AS Title, lb.branch_name AS Branch_Name, julianday(returned_date) - julianday(date_out) AS Days_Borrowed 
--- FROM BOOK as b, LIBRARY_BRANCH as lb
+-- FROM BOOK AS b, LIBRARY_BRANCH AS lb
 -- JOIN BOOK_LOANS AS bl ON bl.book_id = b.book_id AND bl.branch_id = lb.branch_id
 -- WHERE bl.date_out BETWEEN '2022-03-05' AND '2022-03-23';
+
+-- SELECT bo.name, bo.card_no
+-- FROM BORROWER as bo
+-- JOIN BOOK_LOANS AS bl ON bl.card_no = bo.card_no
+-- WHERE bl.due_date < bl.returned_date;
