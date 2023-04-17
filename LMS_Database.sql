@@ -1,4 +1,3 @@
-
 -- INSERT INTO BORROWER (card_no,name,address,phone)
 -- VALUES (NULL,'Dhrutik Solanki','1234 House Street, State, ST, 76019','123-456-7890');
 
@@ -42,11 +41,6 @@
 -- SELECT MAX(julianday(returned_date) - julianday(date_out)) AS Max_Borrowed_Days
 -- FROM BOOK_LOANS;
 
--- SELECT bo.name, bo.address
--- FROM BORROWER AS bo
--- JOIN BOOK_LOANS AS bl ON bl.card_no = bo.card_no
--- GROUP BY bo.name;
-
 -- SELECT b.title, ba.author_name,julianday(returned_date) - julianday(date_out) AS Num_Day,
 --     CASE WHEN bl.returned_date > bl.due_date THEN 1 ELSE 0 END AS Returned_Late
 -- FROM BOOK_LOANS AS bl
@@ -59,3 +53,4 @@
 -- SELECT bo.name, bo.address
 -- FROM BOOK_LOANS AS bl
 -- JOIN  BORROWER as bo ON bl.card_no = bo.card_no;
+

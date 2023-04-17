@@ -1,7 +1,6 @@
 import pandas as pd, os
 
 
-
 # converting .xlsx to .csv
 curr_path = os.getcwd()
 data_curr_path = os.path.join(curr_path,'Data')
