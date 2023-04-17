@@ -1,3 +1,4 @@
+
 -- INSERT INTO BORROWER (card_no,name,address,phone)
 -- VALUES (NULL,'Dhrutik Solanki','1234 House Street, State, ST, 76019','123-456-7890');
 
@@ -44,9 +45,17 @@
 -- SELECT bo.name, bo.address
 -- FROM BORROWER AS bo
 -- JOIN BOOK_LOANS AS bl ON bl.card_no = bo.card_no
--- GROUP bo.name;
+-- GROUP BY bo.name;
 
-SELECT bo.name, bo.address
-FROM BOOK_LOANS AS bl
-JOIN  BORROWER as bo ON bl.card_no = bo.card_no
-GROUP BY bo.card_no;
+-- SELECT b.title, ba.author_name,julianday(returned_date) - julianday(date_out) AS Num_Day,
+--     CASE WHEN bl.returned_date > bl.due_date THEN 1 ELSE 0 END AS Returned_Late
+-- FROM BOOK_LOANS AS bl
+-- JOIN BORROWER as bo ON bl.card_no = bo.card_no
+-- JOIN BOOK AS b ON bl.book_id = b.book_id
+-- JOIN BOOK_AUTHORS AS ba ON ba.book_id = b.book_id
+-- WHERE bo.name = 'Ethan Martinez'
+-- ORDER BY bl.date_out DESC;
+
+-- SELECT bo.name, bo.address
+-- FROM BOOK_LOANS AS bl
+-- JOIN  BORROWER as bo ON bl.card_no = bo.card_no;
